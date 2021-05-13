@@ -17,10 +17,15 @@ public class Course {
     private int duration;
     private String location;
     private Date date;
+    private String instName;
     @OneToMany(mappedBy = "course")
     private List<Users> userList;
 
     private String imagePath;
+
+    public String getInstName() {
+        return instName;
+    }
 
     public Course(){};
 

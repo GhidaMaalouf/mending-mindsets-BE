@@ -13,7 +13,7 @@ public class Users {
     private String firstName;
     private String lastName;
     private String email;
-
+    private String phone;
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="fk_course")
     private Course course;
@@ -24,6 +24,14 @@ public class Users {
         this.lastName = lastName;
         this.email = email;
         this.course=course;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public Users(){};
