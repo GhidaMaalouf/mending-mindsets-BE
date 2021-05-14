@@ -2,7 +2,6 @@ package ad.mendingmindsets.entities;
 
 
 import javax.persistence.*;
-import javax.persistence.Table;
 import java.util.UUID;
 
 @Entity

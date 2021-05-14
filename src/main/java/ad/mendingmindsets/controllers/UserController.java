@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
+
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class UserController {
@@ -22,4 +24,15 @@ public class UserController {
     public void addUser(@RequestBody Users useradded){
         userService.addUser(useradded);
     }
+
+    @DeleteMapping("/api/users/{id}")
+    public void deleteUser(@PathVariable UUID id) {
+        userService.deletebyId(id);
+    }
+
+    @PutMapping("/api/users/{id}")
+    public void updateUser(@RequestBody Users user,@PathVariable UUID id){
+        userService.updateUser(user,id);
+    }
+
 }
